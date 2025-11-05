@@ -77,11 +77,11 @@ export function PricingSection() {
                 {/* Price on Left */}
                 <div className="flex-shrink-0">
                   <div className="flex items-baseline">
-                    <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }}>
+                    <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white">
                       {tier.price}
                     </span>
                     {tier.period && (
-                      <span className="text-base md:text-lg lg:text-xl xl:text-2xl font-light text-white" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>
+                      <span className="text-base md:text-lg lg:text-xl xl:text-2xl font-light text-white">
                         {tier.period}
                       </span>
                     )}
@@ -91,7 +91,7 @@ export function PricingSection() {
                 {/* Features on Right */}
                 <div className="flex-1 text-white text-left md:text-right space-y-0.5">
                   {tier.features.map((feature, featureIndex) => (
-                    <p key={featureIndex} className="text-xs md:text-xs lg:text-sm xl:text-base leading-snug" style={{ textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>
+                    <p key={featureIndex} className="text-xs md:text-xs lg:text-sm xl:text-base leading-snug">
                       {feature}
                     </p>
                   ))}

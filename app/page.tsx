@@ -7,6 +7,7 @@ import { WastedTimeAnimation } from "@/components/WastedTimeAnimation"
 import { MCPCommandsSection } from "@/components/MCPCommandsSection"
 import { PricingSection } from "@/components/PricingSection"
 import { CaseStudiesSection } from "@/components/CaseStudiesSection"
+import { CTASection } from "@/components/CTASection"
 
 export default function Home() {
   return (
@@ -58,7 +59,15 @@ export default function Home() {
             {/* Mobile backing text - inline with hero */}
             <div className="lg:hidden flex flex-col items-center gap-6">
               <p className="text-xl md:text-2xl font-bold leading-relaxed">
-                backed by Fusen Ventures
+                backed by{' '}
+                <Link 
+                  href="https://fusen.world/about"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70 transition-opacity underline"
+                >
+                  Fusen Ventures
+                </Link>
                 <br />
                 @ Georgia Tech
               </p>
@@ -79,7 +88,15 @@ export default function Home() {
           {/* Backing Text - Desktop */}
           <div className="hidden lg:flex flex-col text-right flex-shrink-0 self-start mt-32">
             <p className="text-5xl font-bold leading-relaxed mb-8">
-              backed by Fusen Ventures
+              backed by{' '}
+              <Link 
+                href="https://fusen.world/about"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity underline"
+              >
+                Fusen Ventures
+              </Link>
               <br />
               @ Georgia Tech
             </p>
@@ -211,7 +228,7 @@ export default function Home() {
             <div className="border-4 border-white p-[5px] bg-black">
               <div className="bg-gradient-to-br from-[#4a9fd8] to-[#1c6ba8] p-6 md:p-10 lg:p-12 h-full">
                 <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 lg:mb-8">
-                  Cross-System Correlation
+                  Distributed Tracing
                 </h3>
                 <p className="text-white text-lg md:text-2xl lg:text-3xl leading-relaxed font-light">
                   Automatically correlates logs from multiple agents and systems into a single, coherent incident timeline showing exactly how failures propagate.
@@ -290,6 +307,9 @@ export default function Home() {
 
       {/* Pricing Section */}
       <PricingSection />
+
+      {/* CTA Section */}
+      <CTASection />
     </div>
   )
 }

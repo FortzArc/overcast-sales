@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Poppins, Open_Sans } from "next/font/google"
+import { Poppins, Open_Sans, Fira_Code } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
@@ -16,6 +16,12 @@ const poppins = Poppins({
   variable: "--font-poppins",
 })
 
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-fira-code",
+})
+
 export const metadata: Metadata = {
   title: "Overcast - Your AI Operations Engineer",
   description: "AI Operations Engineer backed by Fusen Ventures @ Georgia Tech",
@@ -29,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} ${poppins.variable} antialiased`} style={{ fontFamily: 'var(--font-poppins)' }}>
+      <body className={`${openSans.variable} ${poppins.variable} ${firaCode.variable} antialiased`} style={{ fontFamily: 'var(--font-poppins)' }}>
         {children}
         <Analytics />
       </body>

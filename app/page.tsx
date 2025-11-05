@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Moon, ArrowUpRight } from "lucide-react"
 import { FragmentedToolsAnimation } from "@/components/FragmentedToolsAnimation"
 import { SurfaceAnalysisAnimation } from "@/components/SurfaceAnalysisAnimation"
+import { MCPCommandsSection } from "@/components/MCPCommandsSection"
 
 export default function Home() {
   return (
@@ -267,6 +268,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* MCP Commands Section */}
+      <MCPCommandsSection />
     </div>
   )
 }

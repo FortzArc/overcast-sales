@@ -5,6 +5,7 @@ import { FragmentedToolsAnimation } from "@/components/FragmentedToolsAnimation"
 import { SurfaceAnalysisAnimation } from "@/components/SurfaceAnalysisAnimation"
 import { WastedTimeAnimation } from "@/components/WastedTimeAnimation"
 import { MCPCommandsSection } from "@/components/MCPCommandsSection"
+import { PricingSection } from "@/components/PricingSection"
 import { CaseStudiesSection } from "@/components/CaseStudiesSection"
 
 export default function Home() {
@@ -114,7 +115,7 @@ export default function Home() {
                   Fragmented tool ecosystem
                 </h3>
                 <p className="text-base md:text-xl lg:text-2xl leading-relaxed mb-4 md:mb-6">
-                  Every tool claims to have AI, but none of them talk to each other. Your logs are in Datadog, metrics in Grafana, traces in Jaeger, and errors in Sentry. When an incident happens, you're stuck manually correlating data across 5+ different dashboards.
+                  Every tool claims to have AI, but none of them talk to each other. When an incident happens, you're stuck manually correlating data across 5+ different dashboards.
                 </p>
                 <ul className="space-y-2 md:space-y-3 text-base md:text-xl lg:text-2xl">
                   <li className="flex items-start">
@@ -143,7 +144,7 @@ export default function Home() {
                   Surface-level AI analysis
                 </h3>
                 <p className="text-base md:text-xl lg:text-2xl leading-relaxed mb-4 md:mb-6">
-                  Most "AI-powered" tools just detect anomalies and alert you. They don't understand how your services interact, can't correlate logs across microservices, and definitely can't tell you why your checkout flow broke when the payment service is fine.
+                  Most "AI-powered" tools just detect anomalies and alert you. They don't understand how your services interact and definitely can't tell you why your checkout flow broke when the payment service is fine.
                 </p>
                 <ul className="space-y-2 md:space-y-3 text-base md:text-xl lg:text-2xl">
                   <li className="flex items-start">
@@ -286,6 +287,9 @@ export default function Home() {
 
       {/* Case Studies Section */}
       <CaseStudiesSection />
+
+      {/* Pricing Section */}
+      <PricingSection />
     </div>
   )
 }

@@ -36,7 +36,7 @@ export function CaseStudiesSection() {
           {caseStudies.map((study, index) => (
             <div key={index} className="border-4 border-white bg-black">
               {/* Quote Box with Gradient */}
-              <div className="bg-gradient-to-br from-[#0064b4] to-[#004a8a] p-6 md:p-8">
+              <div className="bg-gradient-to-br from-[#1c87ec] via-[#6ec5eb] via-[#007cca] to-[#c5e3ff] p-6 md:p-8">
                 <p className="text-white text-base md:text-lg lg:text-xl leading-relaxed">
                   {study.quote}
                 </p>

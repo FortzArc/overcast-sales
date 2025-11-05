@@ -1,8 +1,11 @@
 import Link from "next/link"
-import { Moon, ArrowUpRight } from "lucide-react"
+import Image from "next/image"
+import { ArrowUpRight } from "lucide-react"
 import { FragmentedToolsAnimation } from "@/components/FragmentedToolsAnimation"
 import { SurfaceAnalysisAnimation } from "@/components/SurfaceAnalysisAnimation"
+import { WastedTimeAnimation } from "@/components/WastedTimeAnimation"
 import { MCPCommandsSection } from "@/components/MCPCommandsSection"
+import { CaseStudiesSection } from "@/components/CaseStudiesSection"
 
 export default function Home() {
   return (
@@ -12,13 +15,19 @@ export default function Home() {
         <div className="max-w-[1600px] mx-auto py-4 md:py-6 px-4 md:px-0 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity">
-            <Moon className="w-8 h-8 md:w-12 md:h-12 text-white" />
+            <Image 
+              src="/overcastlogo.png" 
+              alt="Overcast Logo" 
+              width={48} 
+              height={48} 
+              className="w-8 h-8 md:w-12 md:h-12"
+            />
             <span className="text-2xl md:text-4xl font-medium tracking-tight">Overcast</span>
           </Link>
 
           {/* Navigation */}
           <nav className="flex items-center gap-6 md:gap-12 text-base md:text-2xl">
-            <Link href="/case-studies" className="hover:opacity-70 transition-opacity">
+            <Link href="#case-studies" className="hover:opacity-70 transition-opacity">
               Case Studies
             </Link>
             <Link href="/docs" className="hover:opacity-70 transition-opacity">
@@ -181,8 +190,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="hidden lg:block flex-shrink-0 w-[450px]">
-                {/* Placeholder for third animation if needed later */}
-                <div className="w-full h-[400px]"></div>
+                <WastedTimeAnimation />
               </div>
             </div>
           </div>
@@ -190,8 +198,12 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
+
       <section id="features" className="py-12 md:py-24 font-[family-name:var(--font-poppins)]">
         <div className="max-w-[1600px] w-full mx-auto px-4 md:px-0">
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-light mb-8 md:mb-12">
+          Solutions
+        </h2>
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {/* Feature 1: Cross-System Correlation */}
@@ -271,6 +283,9 @@ export default function Home() {
 
       {/* MCP Commands Section */}
       <MCPCommandsSection />
+
+      {/* Case Studies Section */}
+      <CaseStudiesSection />
     </div>
   )
 }

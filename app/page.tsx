@@ -9,6 +9,7 @@ import { PricingSection } from "@/components/PricingSection"
 import { CaseStudiesSection } from "@/components/CaseStudiesSection"
 import { CTASection } from "@/components/CTASection"
 import { AnimatedElement } from "@/components/AnimatedElement"
+import { VideoSection } from "@/components/VideoSection"
 
 export default function Home() {
   return (
@@ -129,6 +130,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Video Section */}
+      <VideoSection
+        videoSrc="/overcast-video.mp4"
+        title="See Overcast in Action"
+        description="Watch how Overcast transforms incident response from reactive firefighting into proactive, AI-powered operations engineering."
+      />
 
       {/* Problems Section */}
       <section id="problems" className="py-12 md:py-24 font-[family-name:var(--font-poppins)]">

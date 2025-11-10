@@ -34,8 +34,8 @@ export default function Home() {
             <Link href="#case-studies" className="hover:opacity-70 transition-opacity">
               Case Studies
             </Link>
-            <Link href="/docs" className="hover:opacity-70 transition-opacity">
-              Docs
+            <Link href="#demo" className="hover:opacity-70 transition-opacity">
+              Demo
             </Link>
           </nav>
         </div>
@@ -133,6 +133,7 @@ export default function Home() {
 
       {/* Video Section */}
       <VideoSection
+        id="demo"
         videoSrc="/overcast-video.mp4"
         title="See Overcast in Action"
         description="Watch how Overcast transforms incident response from reactive firefighting into proactive, AI-powered operations engineering."

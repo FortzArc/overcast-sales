@@ -7,16 +7,18 @@ interface VideoSectionProps {
   title?: string
   description?: string
   className?: string
+  id?: string
 }
 
 export function VideoSection({ 
   videoSrc, 
   title, 
   description, 
-  className = "" 
+  className = "",
+  id
 }: VideoSectionProps) {
   return (
-    <section className={`py-12 md:py-24 font-[family-name:var(--font-poppins)] ${className}`}>
+    <section id={id} className={`py-12 md:py-24 font-[family-name:var(--font-poppins)] ${className}`}>
       <div className="max-w-[1400px] w-full mx-auto px-4">
         {title && (
           <AnimatedElement animation="fade-in-up">

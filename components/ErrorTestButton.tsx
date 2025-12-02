@@ -5,25 +5,30 @@ import { useState } from 'react'
 export function ErrorTestButton() {
   const [clickCount, setClickCount] = useState(0)
 
-  const triggerError = () => {
+  const triggerError = async () => {
     setClickCount(prev => prev + 1)
-    console.log('Triggering real runtime error for Vercel testing...')
+    console.log('Triggering server-side error for Vercel testing...')
     
-    // Create actual runtime errors through nested functions
-    const createNestedError = () => {
-      const nestedFunction = () => {
-        const deeperFunction = () => {
-          // This will cause a real TypeError: Cannot read properties of undefined
-          const undefinedObj: any = undefined
-          return undefinedObj.nonExistentProperty.anotherProperty.someMethod()
-        }
-        return deeperFunction()
+    try {
+      // Call the server API that will throw an error
+      const response = await fetch('/api/test-error', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      
+      if (!response.ok) {
+        console.log('Server responded with error status:', response.status)
       }
-      return nestedFunction()
+      
+      const data = await response.json()
+      console.log('Server response:', data)
+    } catch (error) {
+      // This catch will handle network errors, but the server error 
+      // should be caught by Vercel's monitoring before reaching here
+      console.log('Network or client error while calling server:', error)
     }
-    
-    // This will trigger an actual runtime error
-    createNestedError()
   }
 
   return (

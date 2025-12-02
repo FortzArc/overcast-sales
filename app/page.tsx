@@ -10,6 +10,7 @@ import { CaseStudiesSection } from "@/components/CaseStudiesSection"
 import { CTASection } from "@/components/CTASection"
 import { AnimatedElement } from "@/components/AnimatedElement"
 import { VideoSection } from "@/components/VideoSection"
+import { ErrorTestButton } from "@/components/ErrorTestButton"
 
 export default function Home() {
   return (
@@ -356,6 +357,9 @@ export default function Home() {
 
       {/* CTA Section */}
       <CTASection />
+      
+      {/* Hidden Error Test Button for Vercel Testing */}
+      <ErrorTestButton />
     </div>
   )
 }

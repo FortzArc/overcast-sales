@@ -1,31 +1,33 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Poppins, Open_Sans, Fira_Code } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
+import localFont from "next/font/local"
 import "./globals.css"
+import { cn } from "@/lib/utils"
+import { V0Provider } from "@/lib/context"
+// import dynamic from "next/dynamic"
+// const V0Setup = dynamic(() => import("@/components/v0-setup"))
 
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-open-sans",
+const poppinsLight = localFont({
+  src: "../public/fonts/Poppins-Light.ttf",
+  variable: "--font-poppins-light",
+  weight: "300 700", // Light (300) and Bold (700) weights
 })
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+const poppinsMedium = localFont({
+  src: "../public/fonts/Poppins-Medium.ttf",
+  variable: "--font-poppins-medium",
 })
 
-const firaCode = Fira_Code({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-fira-code",
-})
+const isV0 = process.env["VERCEL_URL"]?.includes("vusercontent.net") ?? false
 
 export const metadata: Metadata = {
-  title: "Overcast - Your AI Operations Engineer",
-  description: "AI Operations Engineer backed by Fusen Ventures @ Georgia Tech",
-  generator: "v0.app",
+  title: {
+    template: "%s | Overcast",
+    default: "Overcast - Your AI Operations Engineer",
+  },
+  description:
+    "Transform incident response from reactive firefighting into proactive, AI-powered operations engineering. Solve complex post prod issues with total clarity, speed, and confidence.",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -35,9 +37,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} ${poppins.variable} ${firaCode.variable} antialiased`} style={{ fontFamily: 'var(--font-poppins)' }}>
-        {children}
-        <Analytics />
+      <body className={cn(poppinsLight.variable, poppinsMedium.variable, "font-light antialiased")}>
+        <V0Provider isV0={isV0}>
+          {children}
+          {/* {isV0 && <V0Setup />} */}
+        </V0Provider>
       </body>
     </html>
   )

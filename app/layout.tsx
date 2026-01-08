@@ -27,7 +27,34 @@ export const metadata: Metadata = {
   },
   description:
     "Transform incident response from reactive firefighting into proactive, AI-powered operations engineering. Solve complex post prod issues with total clarity, speed, and confidence.",
-    generator: 'v0.app'
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      { url: '/images/overcast-header-logo.png' },
+    ],
+    apple: [
+      { url: '/images/overcast-header-logo.png' },
+    ],
+  },
+  openGraph: {
+    title: "Overcast - Your AI Operations Engineer",
+    description: "Transform incident response from reactive firefighting into proactive, AI-powered operations engineering. Solve complex post prod issues with total clarity, speed, and confidence.",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Overcast - AI Operations Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Overcast - Your AI Operations Engineer",
+    description: "Transform incident response from reactive firefighting into proactive, AI-powered operations engineering. Solve complex post prod issues with total clarity, speed, and confidence.",
+    images: ["/opengraph_image.png"],
+  },
 }
 
 export default function RootLayout({

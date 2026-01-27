@@ -1,5 +1,6 @@
 import { Background } from "@/components/background"
 import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -33,21 +34,24 @@ export default function CaseStudiesPage() {
   ]
 
   return (
-    <main className="min-h-screen">
-      <div className="fixed inset-0 p-inset -z-10">
-        <div className="relative h-full w-full">
-          <Background src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alt-g7Cv2QzqL3k6ey3igjNYkM32d8Fld7.mp4" placeholder="/alt-placeholder.png" />
-        </div>
+    <main className="min-h-screen bg-black">
+      <div className="fixed inset-0 z-0">
+        <img
+          src="/images/image-fotor.jpeg"
+          alt="Mountain landscape"
+          className="w-full h-full object-cover object-[center_30%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black" />
       </div>
 
       <Navigation />
 
-      <div className="container mx-auto px-6 pt-32 pb-20">
+      <div className="relative z-10 container mx-auto px-6 pt-32 pb-20">
         <div className="max-w-6xl mx-auto space-y-20">
           {/* Hero Section */}
           <div className="text-center space-y-6">
-            <h1 className="font-serif text-6xl md:text-8xl italic text-foreground">Case Studies</h1>
-            <p className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto text-pretty">
+            <h1 className="text-6xl md:text-8xl text-white font-light">Case Studies</h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto">
               Real companies, real results. See how teams are transforming their incident response with Overcast.
             </p>
           </div>
@@ -57,37 +61,39 @@ export default function CaseStudiesPage() {
             {caseStudies.map((study, index) => (
               <div
                 key={index}
-                className="backdrop-blur-xl bg-primary/20 border-2 border-border/50 rounded-3xl p-10 space-y-6"
+                className="backdrop-blur-xl bg-white/5 border-2 border-white/10 rounded-3xl p-10 space-y-6"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <h2 className="font-serif text-4xl italic text-foreground mb-2">{study.title}</h2>
-                    <span className="inline-block px-4 py-1 rounded-full bg-background/40 border border-border/30 text-sm text-foreground/70">
+                    <h2 className="text-4xl text-white font-medium mb-2">{study.title}</h2>
+                    <span className="inline-block px-4 py-1 rounded-full bg-white/10 border border-white/20 text-sm text-white/70">
                       {study.industry}
                     </span>
                   </div>
                 </div>
 
-                <blockquote className="border-l-4 border-foreground/30 pl-6 py-2">
-                  <p className="text-lg italic text-foreground/90 leading-relaxed">{study.quote}</p>
+                <blockquote className="border-l-4 border-white/30 pl-6 py-2">
+                  <p className="text-lg italic text-white/90 leading-relaxed">{study.quote}</p>
                 </blockquote>
 
-                <p className="text-foreground/80 text-lg leading-relaxed">{study.description}</p>
+                <p className="text-white/80 text-lg leading-relaxed">{study.description}</p>
               </div>
             ))}
           </div>
 
           {/* CTA Section */}
-          <div className="backdrop-blur-xl bg-primary/30 border-2 border-border/50 rounded-3xl p-12 text-center space-y-6">
-            <h2 className="font-serif text-4xl md:text-5xl italic text-foreground">
+          <div className="backdrop-blur-xl bg-white/10 border-2 border-white/10 rounded-3xl p-12 text-center space-y-6">
+            <h2 className="text-4xl md:text-5xl text-white font-light">
               Ready to transform your operations?
             </h2>
-            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Join these companies in solving complex post prod issues with total clarity, speed, and confidence.
             </p>
           </div>
         </div>
       </div>
+
+      <Footer />
     </main>
   )
 }

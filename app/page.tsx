@@ -10,6 +10,7 @@ import { LogoCarousel } from "@/components/logo-carousel"
 import OvercastSecuritySection from "@/components/overcast-security-section"
 import DistributedTracingSection from "@/components/distributed-tracing-section"
 import { CommunityCarousel } from "@/components/community-carousel"
+import { Footer } from "@/components/footer"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
@@ -150,6 +151,15 @@ export default function Home() {
               <a href="#pricing" className="text-white/80 hover:text-white transition-colors text-sm font-medium">
                 Pricing
               </a>
+              <a href="/docs" className="text-white/80 hover:text-white transition-colors text-sm font-medium">
+                Docs
+              </a>
+              <a href="/about" className="text-white/80 hover:text-white transition-colors text-sm font-medium">
+                About
+              </a>
+              <a href="/contact" className="text-white/80 hover:text-white transition-colors text-sm font-medium">
+                Contact
+              </a>
               <Button size="sm" asChild>
                 <a href="https://platform.overcastsre.com/login" target="_blank" rel="noopener noreferrer">
                   Get Started
@@ -187,6 +197,27 @@ export default function Home() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Pricing
+                </a>
+                <a
+                  href="/docs"
+                  className="text-white/80 hover:text-white transition-colors text-sm font-medium py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Docs
+                </a>
+                <a
+                  href="/about"
+                  className="text-white/80 hover:text-white transition-colors text-sm font-medium py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About
+                </a>
+                <a
+                  href="/contact"
+                  className="text-white/80 hover:text-white transition-colors text-sm font-medium py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact
                 </a>
                 <Button size="sm" className="w-full" asChild>
                   <a href="https://platform.overcastsre.com/login" target="_blank" rel="noopener noreferrer">
@@ -348,6 +379,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   )
 }

@@ -1,60 +1,76 @@
-import type React from "react"
-import type { Metadata } from "next"
-import localFont from "next/font/local"
-import "./globals.css"
-import { cn } from "@/lib/utils"
-import { V0Provider } from "@/lib/context"
-// import dynamic from "next/dynamic"
-// const V0Setup = dynamic(() => import("@/components/v0-setup"))
+import type { Metadata, Viewport } from 'next'
+import { JetBrains_Mono } from 'next/font/google'
+import { GeistPixelGrid } from 'geist/font/pixel'
+import { ThemeProvider } from '@/components/theme-provider'
 
-const poppinsLight = localFont({
-  src: "../public/fonts/Poppins-Light.ttf",
-  variable: "--font-poppins-light",
-  weight: "300 700", // Light (300) and Bold (700) weights
+import './globals.css'
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
 })
-
-const poppinsMedium = localFont({
-  src: "../public/fonts/Poppins-Medium.ttf",
-  variable: "--font-poppins-medium",
-})
-
-const isV0 = process.env["VERCEL_URL"]?.includes("vusercontent.net") ?? false
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Overcast",
-    default: "Overcast - Your AI Operations Engineer",
-  },
+  title: 'Brutalist AI SaaS Landing Page Template | Engineering-Grade Dark UI Kit',
   description:
-    "Transform incident response from reactive firefighting into proactive, AI-powered operations engineering. Solve complex post prod issues with total clarity, speed, and confidence.",
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      { url: '/images/overcast-header-logo.png' },
-    ],
-    apple: [
-      { url: '/images/overcast-header-logo.png' },
-    ],
+    'A brutalist, engineering-themed landing page template for AI infrastructure and SaaS products. Features Geist Pixel typography, dot-grid backgrounds, live terminal animations, scramble-text micro-interactions, bento feature grids, isometric 3D illustrations, and a fully responsive dark industrial design system. Built with Next.js 16, Tailwind CSS, and Framer Motion.',
+  keywords: [
+    'brutalist landing page template',
+    'AI SaaS template',
+    'engineering UI kit',
+    'Next.js landing page',
+    'Tailwind CSS template',
+    'dark UI template',
+    'Geist Pixel font',
+    'bento grid layout',
+    'SaaS pricing page',
+    'Framer Motion animations',
+    'monospace design system',
+    'developer landing page',
+    'AI infrastructure template',
+    'industrial web design',
+    'dot matrix typography',
+    'terminal UI components',
+    'startup landing page',
+    'tech landing page template',
+  ],
+  authors: [{ name: 'SYS.INT' }],
+  creator: 'System Intelligence Corp.',
+  publisher: 'System Intelligence Corp.',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
-    title: "Overcast - Your AI Operations Engineer",
-    description: "Transform incident response from reactive firefighting into proactive, AI-powered operations engineering. Solve complex post prod issues with total clarity, speed, and confidence.",
-    type: "website",
-    images: [
-      {
-        url: "/opengraph_image.png",
-        width: 1200,
-        height: 630,
-        alt: "Overcast - AI Operations Engineer",
-      },
-    ],
+    type: 'website',
+    locale: 'en_US',
+    title: 'Brutalist AI SaaS Landing Page Template | Engineering-Grade Dark UI Kit',
+    description:
+      'A brutalist, engineering-themed landing page template for AI and SaaS products. Geist Pixel typography, terminal animations, bento grids, scramble-text effects, and a full industrial design system. Next.js 16 + Tailwind CSS + Framer Motion.',
+    siteName: 'SYS.INT Template',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Overcast - Your AI Operations Engineer",
-    description: "Transform incident response from reactive firefighting into proactive, AI-powered operations engineering. Solve complex post prod issues with total clarity, speed, and confidence.",
-    images: ["/opengraph_image.png"],
+    card: 'summary_large_image',
+    title: 'Brutalist AI SaaS Landing Page Template',
+    description:
+      'Engineering-grade brutalist template for AI SaaS products. Dot-grid backgrounds, live terminal animations, Geist Pixel typography, bento feature grids, and scramble-text micro-interactions. Built with Next.js 16.',
+    creator: '@sysint',
   },
+  category: 'technology',
+}
+
+export const viewport: Viewport = {
+  themeColor: '#0a0a0a',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
@@ -63,12 +79,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(poppinsLight.variable, poppinsMedium.variable, "font-light antialiased")}>
-        <V0Provider isV0={isV0}>
+    <html lang="en" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable} dark`} suppressHydrationWarning>
+      <body className="font-mono antialiased">
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false} disableTransitionOnChange>
           {children}
-          {/* {isV0 && <V0Setup />} */}
-        </V0Provider>
+        </ThemeProvider>
       </body>
     </html>
   )

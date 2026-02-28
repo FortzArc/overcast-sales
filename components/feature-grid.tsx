@@ -159,12 +159,12 @@ function DemoContent({ demo }: { demo: typeof solutions[0]["demo"] }) {
   if (demo.type === "code") {
     const content = demo.content as string
     return (
-      <div className="border-2 border-foreground bg-muted/20 p-6">
-        <div className="border-2 border-[#2E3F4F] bg-[#111418] -m-6">
+      <div className="border-2 border-foreground bg-muted/20 p-4 sm:p-6">
+        <div className="border-2 border-[#2E3F4F] bg-[#111418] -m-4 sm:-m-6 overflow-x-auto">
           {/* File tab */}
           <div className="flex items-center gap-2 px-3 py-2 border-b border-[#2E3F4F] bg-[#0a0c0e]">
             <div className="w-1.5 h-1.5 rounded-full bg-[#6B7C85]" />
-            <span className="text-[9px] font-mono font-semibold text-[#C8CDD0] tracking-wider">
+            <span className="text-[8px] sm:text-[9px] font-mono font-semibold text-[#C8CDD0] tracking-wider">
               forecast.js
             </span>
             <span className="ml-auto text-[8px] text-[#6B7C85] tracking-wider uppercase border border-[#2E3F4F] px-1.5 py-0.5">
@@ -172,7 +172,7 @@ function DemoContent({ demo }: { demo: typeof solutions[0]["demo"] }) {
             </span>
           </div>
           {/* Code content */}
-          <div className="p-4" style={{ fontSize: "9px", lineHeight: "1.65" }}>
+          <div className="p-4 text-[8px] sm:text-[9px] leading-relaxed" style={{ lineHeight: "1.65" }}>
             <pre className="font-mono text-[#C8CDD0] overflow-x-auto whitespace-pre-wrap">
               <code>
                 {content.split('\n').map((line, i) => {
@@ -550,7 +550,7 @@ export function FeatureGrid() {
   }
 
   return (
-    <section className="w-full px-6 py-8 lg:px-12">
+    <section id="solutions" className="w-full px-4 sm:px-6 py-6 sm:py-8 lg:px-12">
       {/* Section label */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -609,7 +609,7 @@ export function FeatureGrid() {
             className="border-2 border-foreground bg-background mb-12"
           >
             {/* Expanded Feature */}
-            <div className="px-5 py-6 lg:px-8 lg:py-8 flex flex-col gap-4 min-h-[500px] lg:min-h-[600px]">
+            <div className="px-4 py-5 sm:px-5 sm:py-6 lg:px-8 lg:py-8 flex flex-col gap-4 min-h-[400px] lg:min-h-[600px]">
               <div className="flex items-center justify-between border-b-2 border-foreground pb-3 mb-2">
                 <span className="text-[10px] tracking-[0.2em] uppercase font-mono">
                   {String(expandedIndex + 1).padStart(2, "0")}
@@ -823,12 +823,12 @@ export function FeatureGrid() {
                   </span>
                 </div>
                 <div className="space-y-3">
-                  <div className="border-2 border-foreground bg-muted/20 p-6">
-                    <div className="border-2 border-[#2E3F4F] bg-[#111418] -m-6">
+                  <div className="border-2 border-foreground bg-muted/20 p-4 sm:p-6">
+                    <div className="border-2 border-[#2E3F4F] bg-[#111418] -m-4 sm:-m-6 overflow-x-auto">
                       {/* File tab */}
                       <div className="flex items-center gap-2 px-3 py-2 border-b border-[#2E3F4F] bg-[#0a0c0e]">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#6B7C85]" />
-                        <span className="text-[9px] font-mono font-semibold text-[#C8CDD0] tracking-wider">
+                        <span className="text-[8px] sm:text-[9px] font-mono font-semibold text-[#C8CDD0] tracking-wider">
                           sdk.js
                         </span>
                         <span className="ml-auto text-[8px] text-[#6B7C85] tracking-wider uppercase border border-[#2E3F4F] px-1.5 py-0.5">
@@ -836,7 +836,7 @@ export function FeatureGrid() {
                         </span>
                       </div>
                       {/* Code content */}
-                      <div className="p-4" style={{ fontSize: "9px", lineHeight: "1.65" }}>
+                      <div className="p-4 text-[8px] sm:text-[9px] leading-relaxed" style={{ lineHeight: "1.65" }}>
                         <pre className="font-mono overflow-x-auto whitespace-pre-wrap">
                           <code>
                             {`import { Overcast } from '@overcast/sdk'

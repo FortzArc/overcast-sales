@@ -61,7 +61,7 @@ const competitors = [
 
 export function DifferentiationSection() {
   return (
-    <section className="w-full px-6 py-8 lg:px-12">
+    <section className="w-full px-4 sm:px-6 py-6 sm:py-8 lg:px-12 overflow-x-hidden">
       {/* Section label */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -120,7 +120,7 @@ export function DifferentiationSection() {
                 />
               </div>
             )}
-            <div className={`relative z-10 px-5 py-6 flex flex-col gap-4 min-h-[400px] ${
+            <div className={`relative z-10 px-5 py-6 flex flex-col gap-4 min-h-[320px] lg:min-h-[400px] ${
               competitor.highlighted ? "text-white" : ""
             }`}>
               {/* Header */}
@@ -283,17 +283,17 @@ export function DifferentiationSection() {
                   <RlAlgorithmsChart />
                 </div>
                 <div className="p-6 lg:p-8 bg-muted/20">
-                  <div className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono mb-3">
+                  <div className="text-[10px] lg:text-xs tracking-[0.2em] uppercase text-muted-foreground font-mono mb-3">
                     01 // RL_ALGORITHMS
                   </div>
-                  <h3 className="text-lg font-mono font-bold tracking-tight uppercase text-foreground mb-3">
+                  <h3 className="text-lg lg:text-xl font-mono font-bold tracking-tight uppercase text-foreground mb-3">
                     Advanced RL Algorithms
                   </h3>
-                  <p className="text-xs font-mono text-muted-foreground leading-relaxed mb-3">
+                  <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed lg:leading-loose mb-3">
                     Our agents use reinforcement learning algorithms that continuously learn from production patterns, 
                     forecasting issues and providing actionable advice before problems occur.
                   </p>
-                  <p className="text-xs font-mono text-muted-foreground leading-relaxed">
+                  <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed lg:leading-loose">
                     These RL algorithms are sourced from the same battle-tested systems used at quantitative trading firms 
                     for high-frequency trading, where millisecond-level decision-making and pattern recognition are critical. 
                     This pedigree ensures our forecasting and advisory capabilities operate at the highest level of precision, 
@@ -314,17 +314,17 @@ export function DifferentiationSection() {
                   <CodeHeatmap />
                 </div>
                 <div className="p-6 lg:p-8 bg-muted/20">
-                  <div className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono mb-3">
+                  <div className="text-[10px] lg:text-xs tracking-[0.2em] uppercase text-muted-foreground font-mono mb-3">
                     02 // CODE_HEATMAP
                   </div>
-                  <h3 className="text-lg font-mono font-bold tracking-tight uppercase text-foreground mb-3">
+                  <h3 className="text-lg lg:text-xl font-mono font-bold tracking-tight uppercase text-foreground mb-3">
                     Problematic Code Heatmapping
                   </h3>
-                  <p className="text-xs font-mono text-muted-foreground leading-relaxed mb-3">
+                  <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed lg:leading-loose mb-3">
                     Intelligent heatmapping identifies areas of code that are most likely to cause production issues, 
                     allowing teams to focus on high-risk areas before deployment.
                   </p>
-                  <p className="text-xs font-mono text-muted-foreground leading-relaxed">
+                  <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed lg:leading-loose">
                     By analyzing historical failure patterns, code complexity metrics, and dependency relationships, the 
                     heatmap provides a visual risk assessment that prioritizes critical code paths. This enables teams to 
                     allocate review resources effectively, catch potential issues early, and deploy with greater confidence 
@@ -345,17 +345,17 @@ export function DifferentiationSection() {
                   <DependencyChunkingDiff />
                 </div>
                 <div className="p-6 lg:p-8 bg-muted/20">
-                  <div className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono mb-3">
+                  <div className="text-[10px] lg:text-xs tracking-[0.2em] uppercase text-muted-foreground font-mono mb-3">
                     03 // DEPENDENCY_CHUNKING
                   </div>
-                  <h3 className="text-lg font-mono font-bold tracking-tight uppercase text-foreground mb-3">
+                  <h3 className="text-lg lg:text-xl font-mono font-bold tracking-tight uppercase text-foreground mb-3">
                     Chain-of-Dependency Chunking
                   </h3>
-                  <p className="text-xs font-mono text-muted-foreground leading-relaxed mb-3">
+                  <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed lg:leading-loose mb-3">
                     As you push from dev to prod, our agents perform chain-of-dependency chunking, analyzing how changes 
                     propagate through your system and identifying potential failure points.
                   </p>
-                  <p className="text-xs font-mono text-muted-foreground leading-relaxed">
+                  <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed lg:leading-loose">
                     This allows for rapid code deployment with confidence, as the system maintains full observability 
                     across dependency chains even as state changes propagate through your infrastructure. By understanding 
                     the complete dependency graph before deployment, teams can push code fast while maintaining visibility 

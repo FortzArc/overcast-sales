@@ -9,7 +9,7 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 export function WhyOvercastSection() {
   return (
-    <section className="w-full px-6 py-8 lg:px-12">
+    <section className="w-full px-4 sm:px-6 py-6 sm:py-8 lg:px-12">
       {/* Section label */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -52,33 +52,33 @@ export function WhyOvercastSection() {
       >
         <Tabs defaultValue="forecasting" className="w-full">
           <div className="border-b-2 border-foreground">
-            <TabsList className="w-full h-auto bg-transparent p-0 border-0 rounded-none">
+            <TabsList className="w-full h-auto bg-transparent p-0 border-0 rounded-none flex flex-col md:flex-row">
               <TabsTrigger
                 value="forecasting"
-                className="flex-1 border-r-2 border-foreground rounded-none data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-none px-4 py-3 text-xs font-mono tracking-wider uppercase"
+                className="flex-1 border-b-2 md:border-b-0 md:border-r-2 border-foreground rounded-none data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-none px-4 py-3 text-xs font-mono tracking-wider uppercase justify-center"
               >
-                <TrendingUp size={14} className="mr-2" />
-                Production Forecasting
+                <TrendingUp size={18} className="shrink-0 md:mr-2" />
+                <span className="hidden md:inline text-left md:text-center truncate" title="Production Forecasting">Production Forecasting</span>
               </TabsTrigger>
               <TabsTrigger
                 value="domain-intelligence"
-                className="flex-1 border-r-2 border-foreground rounded-none data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-none px-4 py-3 text-xs font-mono tracking-wider uppercase"
+                className="flex-1 border-b-2 md:border-b-0 md:border-r-2 border-foreground rounded-none data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-none px-4 py-3 text-xs font-mono tracking-wider uppercase justify-center"
               >
-                <Brain size={14} className="mr-2" />
-                Domain Specific Intelligence
+                <Brain size={18} className="shrink-0 md:mr-2" />
+                <span className="hidden md:inline text-left md:text-center truncate" title="Domain Specific Intelligence">Domain Specific Intelligence</span>
               </TabsTrigger>
               <TabsTrigger
                 value="openclaw-native"
-                className="flex-1 rounded-none data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-none px-4 py-3 text-xs font-mono tracking-wider uppercase"
+                className="flex-1 rounded-none data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-none px-4 py-3 text-xs font-mono tracking-wider uppercase justify-center"
               >
-                <Bug size={14} className="mr-2" />
-                OpenClaw Native
+                <Bug size={18} className="shrink-0 md:mr-2" />
+                <span className="hidden md:inline text-left md:text-center truncate" title="OpenClaw Native">OpenClaw Native</span>
               </TabsTrigger>
             </TabsList>
           </div>
 
           {/* Production Forecasting Tab - Combined with Code Analysis */}
-          <TabsContent value="forecasting" className="m-0 p-6 lg:p-8">
+          <TabsContent value="forecasting" className="m-0 p-4 lg:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <div className="space-y-4">
                 <h3 className="text-xl lg:text-2xl font-mono font-bold tracking-tight uppercase text-foreground">
@@ -109,7 +109,7 @@ export function WhyOvercastSection() {
                   </div>
                   
                   {/* CLI Flowchart + Code */}
-                  <div className="p-4" style={{ fontSize: "9px", lineHeight: "1.65" }}>
+                  <div className="p-4 text-[8px] sm:text-[9px] leading-relaxed font-mono" style={{ lineHeight: "1.65" }}>
                     {/* CLI Flowchart */}
                     <div className="mb-4 font-mono">
                       <div className="text-[#6B7C85] mb-2">$ overcast forecast</div>
@@ -249,7 +249,7 @@ const forecast = await overcast.forecast({
           </TabsContent>
 
           {/* Domain Specific Intelligence Tab */}
-          <TabsContent value="domain-intelligence" className="m-0 p-6 lg:p-8">
+          <TabsContent value="domain-intelligence" className="m-0 p-4 lg:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <div className="space-y-4">
                 <h3 className="text-xl lg:text-2xl font-mono font-bold tracking-tight uppercase text-foreground">
@@ -291,7 +291,7 @@ const forecast = await overcast.forecast({
           </TabsContent>
 
           {/* OpenClaw Native Tab */}
-          <TabsContent value="openclaw-native" className="m-0 p-6 lg:p-8">
+          <TabsContent value="openclaw-native" className="m-0 p-4 lg:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <div className="space-y-4">
                 <h3 className="text-xl lg:text-2xl font-mono font-bold tracking-tight uppercase text-foreground">
@@ -324,7 +324,7 @@ const forecast = await overcast.forecast({
                   </div>
                   
                   {/* CLI Flowchart */}
-                  <div className="p-4" style={{ fontSize: "9px", lineHeight: "1.65" }}>
+                  <div className="p-4 text-[8px] sm:text-[9px] leading-relaxed font-mono" style={{ lineHeight: "1.65" }}>
                     <div className="mb-4 font-mono">
                       <div className="text-[#6B7C85] mb-2">$ overcast runtime</div>
                       <div className="text-[#6B7C85]">│</div>

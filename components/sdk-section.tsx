@@ -26,7 +26,7 @@ const sdkSteps = [
 
 export function SdkSection() {
   return (
-    <section className="w-full px-6 py-8 lg:px-12">
+    <section className="w-full px-4 sm:px-6 py-6 sm:py-8 lg:px-12">
       {/* Section label */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -67,7 +67,7 @@ export function SdkSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7, ease }}
-          className="border-b-2 lg:border-b-0 lg:border-r-2 border-foreground p-6 lg:p-8"
+          className="border-b-2 lg:border-b-0 lg:border-r-2 border-foreground p-4 lg:p-8"
         >
           <div className="space-y-6">
             {sdkSteps.map((step, index) => {
@@ -111,7 +111,7 @@ export function SdkSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7, delay: 0.1, ease }}
-          className="p-6 lg:p-8 bg-muted/20"
+          className="p-4 lg:p-8 bg-muted/20"
         >
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b-2 border-foreground pb-3">
@@ -123,8 +123,8 @@ export function SdkSection() {
               </span>
             </div>
             <div className="space-y-3">
-              <div className="border-2 border-foreground bg-muted/20 p-6">
-                <div className="border-2 border-[#2E3F4F] bg-[#111418] -m-6">
+              <div className="border-2 border-foreground bg-muted/20 p-4 sm:p-6">
+                <div className="border-2 border-[#2E3F4F] bg-[#111418] -m-4 sm:-m-6 overflow-x-auto">
                   {/* File tab */}
                   <div className="flex items-center gap-2 px-3 py-2 border-b border-[#2E3F4F] bg-[#0a0c0e]">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#6B7C85]" />
@@ -136,7 +136,7 @@ export function SdkSection() {
                     </span>
                   </div>
                   {/* Code content */}
-                  <div className="p-4" style={{ fontSize: "9px", lineHeight: "1.65" }}>
+                  <div className="p-4 text-[8px] sm:text-[9px] leading-relaxed" style={{ lineHeight: "1.65" }}>
                   <pre className="font-mono overflow-x-auto whitespace-pre-wrap">
                     <code>
                       {`import { Overcast } from '@overcast/sdk'

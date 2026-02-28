@@ -246,7 +246,7 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
                 />
               )}
               <span
-                className={`text-xs font-mono leading-relaxed ${
+                className={`text-[10px] sm:text-xs font-mono leading-relaxed ${
                   feature.included
                     ? tier.highlighted
                       ? "text-white"
@@ -266,7 +266,7 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
       {/* CTA */}
       <div className="px-5 pb-5 pt-3">
         <motion.a
-          href={tier.id === "enterprise" ? "https://calendly.com/raghavb5120/30min?month=2026-01" : "https://platform.overcastsre.com/login"}
+          href={tier.id === "enterprise" ? "https://calendly.com/raghavb5120/30min?month=2026-01" : "https://platform.overcastsre.com/"}
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}
@@ -291,7 +291,7 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
 /* ── main pricing section ── */
 export function PricingSection() {
   return (
-    <section className="w-full px-6 py-8 lg:px-12">
+    <section id="pricing" className="w-full px-4 sm:px-6 py-6 sm:py-8 lg:px-12">
       {/* Section label */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}

@@ -14,14 +14,10 @@ const CLIENTS = [
   "BLOCKHOUSE",
 ]
 
-function LogoBlock({ name, glitch }: { name: string; glitch: boolean }) {
+function LogoBlock({ name }: { name: string }) {
   return (
-    <div
-      className={`flex items-center justify-center px-8 py-4 border-r-2 border-foreground shrink-0 ${
-        glitch ? "animate-glitch" : ""
-      }`}
-    >
-      <span className="text-sm font-mono tracking-[0.15em] uppercase text-foreground whitespace-nowrap">
+    <div className="flex items-center justify-center px-4 py-3 sm:px-8 sm:py-4 border-r-2 border-foreground shrink-0">
+      <span className="text-xs sm:text-sm font-mono tracking-[0.15em] uppercase text-foreground whitespace-nowrap">
         {name}
       </span>
     </div>
@@ -29,10 +25,10 @@ function LogoBlock({ name, glitch }: { name: string; glitch: boolean }) {
 }
 
 export function GlitchMarquee() {
-  const glitchIndices = [1, 4]
+  const marqueeContent = [...CLIENTS, ...CLIENTS, ...CLIENTS]
 
   return (
-    <section className="w-full py-8 px-6 lg:px-12">
+    <section className="w-full py-8 px-4 sm:px-6 lg:px-12">
       {/* Section label */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -56,13 +52,12 @@ export function GlitchMarquee() {
         transition={{ duration: 0.6, ease }}
         className="overflow-hidden border-2 border-foreground"
       >
-        <div className="flex animate-marquee" style={{ width: "max-content" }}>
-          {[...CLIENTS, ...CLIENTS].map((name, i) => (
-            <LogoBlock
-              key={`${name}-${i}`}
-              name={name}
-              glitch={glitchIndices.includes(i % CLIENTS.length)}
-            />
+        <div
+          className="flex animate-marquee will-change-transform"
+          style={{ width: "max-content" }}
+        >
+          {marqueeContent.map((name, i) => (
+            <LogoBlock key={`${name}-${i}`} name={name} />
           ))}
         </div>
       </motion.div>

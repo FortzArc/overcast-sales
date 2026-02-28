@@ -3,7 +3,8 @@
 import { useEffect, useState, useRef } from "react"
 import { motion, useInView, AnimatePresence } from "framer-motion"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from "lucide-react"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -148,10 +149,18 @@ function StatBlock({ label, value, index }: { label: string; value: string; inde
   )
 }
 
+const TRUNCATE_LENGTH = 180
+
 /* ── main about section ── */
 export function AboutSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isExpanded, setIsExpanded] = useState(false)
+  const isMobile = useIsMobile()
   const current = testimonials[currentIndex]
+
+  useEffect(() => {
+    setIsExpanded(false)
+  }, [currentIndex])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -174,7 +183,7 @@ export function AboutSection() {
   }
 
   return (
-    <section className="w-full px-6 py-8 lg:px-12">
+    <section id="case-studies" className="w-full px-4 sm:px-6 py-6 sm:py-8 lg:px-12">
       {/* Section label */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -220,7 +229,7 @@ export function AboutSection() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="absolute inset-0 flex flex-col gap-3 items-center justify-center p-6"
+              className="absolute inset-0 grid grid-cols-2 lg:flex lg:flex-col gap-2 lg:gap-3 items-center justify-center p-4 lg:p-6"
             >
               {current.stats.map((stat, i) => (
                 <motion.div
@@ -228,12 +237,12 @@ export function AboutSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1, duration: 0.3 }}
-                  className="border-2 border-foreground px-4 py-3 w-full max-w-xs"
+                  className="border-2 border-foreground px-3 py-2 lg:px-4 lg:py-3 w-full max-w-full lg:max-w-xs"
                 >
-                  <span className="text-[10px] tracking-[0.2em] uppercase text-foreground font-mono block mb-1">
+                  <span className="text-[9px] lg:text-[10px] tracking-[0.2em] uppercase text-foreground font-mono block mb-1">
                     {stat.label}
                   </span>
-                  <span className="text-2xl lg:text-3xl font-mono font-bold tracking-tight text-foreground">
+                  <span className="text-lg lg:text-2xl xl:text-3xl font-mono font-bold tracking-tight text-foreground">
                     <ScrambleText text={stat.value} />
                   </span>
                 </motion.div>
@@ -292,8 +301,26 @@ export function AboutSection() {
                 {/* Case Study Excerpt */}
                 <div className="space-y-4 border-t-2 border-foreground pt-4">
                   <p className="text-xs lg:text-sm font-mono text-foreground leading-relaxed">
-                    {current.description}
+                    {isMobile && !isExpanded && current.description.length > TRUNCATE_LENGTH
+                      ? `${current.description.slice(0, TRUNCATE_LENGTH)}...`
+                      : current.description}
                   </p>
+                  {isMobile && current.description.length > TRUNCATE_LENGTH && (
+                    <button
+                      onClick={() => setIsExpanded(!isExpanded)}
+                      className="flex items-center gap-1 text-xs font-mono tracking-wider uppercase text-[#7a96a4] hover:text-foreground transition-colors"
+                    >
+                      {isExpanded ? (
+                        <>
+                          Show less <ChevronUp size={12} />
+                        </>
+                      ) : (
+                        <>
+                          Read more <ChevronDown size={12} />
+                        </>
+                      )}
+                    </button>
+                  )}
                 </div>
               </motion.div>
             </AnimatePresence>

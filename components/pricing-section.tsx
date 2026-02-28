@@ -100,7 +100,7 @@ const TIERS: Tier[] = [
   {
     id: "startups-smb",
     name: "STARTUPS_SMB",
-    price: "149",
+    price: "50",
     period: "/user/mo",
     tag: "RECOMMENDED",
     description: "Compliance-ready audit trails + secure logging",
@@ -117,8 +117,8 @@ const TIERS: Tier[] = [
   {
     id: "enterprise",
     name: "ENTERPRISE",
-    price: "300",
-    period: "/user/mo",
+    price: "CUSTOM",
+    period: "",
     tag: null,
     description: "Unlimited agents + custom integrations",
     features: [
@@ -129,7 +129,7 @@ const TIERS: Tier[] = [
       { text: "1-year+ history", included: true },
       { text: "24/7 support · 99.99% SLA", included: true },
     ],
-    cta: "GET STARTED",
+    cta: "TALK TO US",
     highlighted: false,
   },
 ]
@@ -266,7 +266,7 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
       {/* CTA */}
       <div className="px-5 pb-5 pt-3">
         <motion.a
-          href={tier.id === "enterprise" ? "https://calendly.com/raghavb5120/30min?month=2026-01" : "https://platform.overcastsre.com/"}
+          href={tier.id === "enterprise" ? "https://calendly.com/mohan-overcastsre/30min" : "https://platform.overcastsre.com/"}
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}

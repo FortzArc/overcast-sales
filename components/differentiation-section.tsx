@@ -29,7 +29,7 @@ const competitors = [
   },
   {
     category: "AI Code Review",
-    names: ["Coderabit", "Greptile"],
+    names: ["Code Rabbit", "Greptile"],
     whatTheyDo: "AI code review and PR suggestions",
     limitation: "Only analyzes code, not production behavior",
     features: [
@@ -156,7 +156,7 @@ export function DifferentiationSection() {
                 <div className={`text-[10px] tracking-[0.2em] uppercase font-mono ${
                   competitor.highlighted ? "text-white/70" : "opacity-60"
                 }`}>
-                  WHAT_THEY_DO
+                  {competitor.highlighted ? "WHAT_WE_DO" : "WHAT_THEY_DO"}
                 </div>
                 <p
                   className={`text-xs font-mono leading-relaxed ${
@@ -171,7 +171,7 @@ export function DifferentiationSection() {
                   <div className={`text-[10px] tracking-[0.2em] uppercase font-mono ${
                     competitor.highlighted ? "text-white/70" : "opacity-60"
                   }`}>
-                    LIMITATION
+                    {competitor.highlighted ? "OUR EDGE" : "LIMITATION"}
                   </div>
                   <p
                     className={`text-xs font-mono leading-relaxed ${

@@ -52,17 +52,17 @@ export function WhyOvercastSection() {
       >
         <Tabs defaultValue="forecasting" className="w-full">
           <div className="border-b-2 border-foreground">
-            <TabsList className="w-full h-auto bg-transparent p-0 border-0 rounded-none flex flex-col md:flex-row">
+            <TabsList className="w-full h-auto bg-transparent p-0 border-0 rounded-none flex flex-row">
               <TabsTrigger
                 value="forecasting"
-                className="flex-1 border-b-2 md:border-b-0 md:border-r-2 border-foreground rounded-none data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-none px-4 py-3 text-xs font-mono tracking-wider uppercase justify-center"
+                className="flex-1 border-r-2 border-foreground rounded-none data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-none px-4 py-3 text-xs font-mono tracking-wider uppercase justify-center"
               >
                 <TrendingUp size={18} className="shrink-0 md:mr-2" />
                 <span className="hidden md:inline text-left md:text-center truncate" title="Production Forecasting">Production Forecasting</span>
               </TabsTrigger>
               <TabsTrigger
                 value="domain-intelligence"
-                className="flex-1 border-b-2 md:border-b-0 md:border-r-2 border-foreground rounded-none data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-none px-4 py-3 text-xs font-mono tracking-wider uppercase justify-center"
+                className="flex-1 border-r-2 border-foreground rounded-none data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-none px-4 py-3 text-xs font-mono tracking-wider uppercase justify-center"
               >
                 <Brain size={18} className="shrink-0 md:mr-2" />
                 <span className="hidden md:inline text-left md:text-center truncate" title="Domain Specific Intelligence">Domain Specific Intelligence</span>

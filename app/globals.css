@@ -121,3 +121,16 @@
 .animate-blink {
   animation: blink 1s step-end infinite;
 }
+
+/* Pitch deck print styles */
+@media print {
+  .pitch-deck {
+    background: hsl(0 0% 4%) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .pitch-deck * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

@@ -54,7 +54,7 @@ export function SdkSection() {
           Easy Drag & Drop SDK
         </h2>
         <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed max-w-4xl">
-          Get started with Overcast in minutes. Our drag and drop SDK makes setup effortless—no complex 
+          Get started with Overcast in minutes. Our drag and drop SDK makes setup effortless  —  no complex 
           configuration or infrastructure changes required.
         </p>
       </motion.div>
@@ -114,11 +114,11 @@ export function SdkSection() {
           className="p-4 lg:p-8 bg-muted/20"
         >
           <div className="space-y-4">
-            <div className="flex items-center justify-between border-b-2 border-foreground pb-3">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b-2 border-foreground pb-3">
               <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
                 SDK_INTEGRATION
               </span>
-              <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
+              <span className="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono break-all sm:break-normal">
                 npm install @overcast/sdk
               </span>
             </div>
@@ -151,7 +151,7 @@ const overcast = new Overcast({
 // Start forecasting
 overcast.forecast()
 
-// Real-time suggestions
+// Real - time suggestions
 overcast.on('suggestion', (fix) => {
   // Auto-generates PR
   console.log(fix)
@@ -272,7 +272,7 @@ overcast.on('suggestion', (fix) => {
                   <li>• Auto-detects codebase structure</li>
                   <li>• Connects to existing log sources</li>
                   <li>• Zero configuration required</li>
-                  <li>• Real-time forecasting enabled</li>
+                  <li>• Real - time forecasting enabled</li>
                 </ul>
               </div>
             </div>

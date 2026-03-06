@@ -44,11 +44,11 @@ function ScramblePrice({ target, prefix = "$" }: { target: string; prefix?: stri
 
 /* ── data-stream status line ── */
 function StatusLine() {
-  const [throughput, setThroughput] = useState("0.0")
+  const [throughput, setThroughput] = useState("100")
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setThroughput((Math.random() * 50 + 10).toFixed(1))
+      setThroughput((Math.random() * 100 + 100).toFixed(0))
     }, 2000)
     return () => clearInterval(interval)
   }, [])
@@ -56,7 +56,7 @@ function StatusLine() {
   return (
     <div className="flex items-center gap-2 text-[10px] tracking-widest text-muted-foreground uppercase font-mono">
       <span className="h-1.5 w-1.5 bg-[#7a96a4]" />
-      <span>live throughput: {throughput}k req/s</span>
+      <span>Logs/min Today: {throughput}k</span>
     </div>
   )
 }
@@ -81,14 +81,14 @@ interface Tier {
 
 const TIERS: Tier[] = [
   {
-    id: "devs-indies",
-    name: "DEVS_INDIES",
-    price: "8",
+    id: "startups-smb",
+    name: "STARTUPS_SMB",
+    price: "150",
     period: "/user/mo",
     tag: null,
     description: "Plug-and-play sidecar for instant reliability",
     features: [
-      { text: "Overcast SDK — drag & drop setup", included: true },
+      { text: "Overcast SDK  —  drag & drop setup", included: true },
       { text: "Production forecasting + auto PR fixes", included: true },
       { text: "3 agents", included: true },
       { text: "7-day history", included: true },
@@ -98,9 +98,9 @@ const TIERS: Tier[] = [
     highlighted: false,
   },
   {
-    id: "startups-smb",
-    name: "STARTUPS_SMB",
-    price: "50",
+    id: "midmarket",
+    name: "MIDMARKET",
+    price: "350",
     period: "/user/mo",
     tag: "RECOMMENDED",
     description: "Compliance-ready audit trails + secure logging",
@@ -111,7 +111,7 @@ const TIERS: Tier[] = [
       { text: "30-day history", included: true },
       { text: "99.9% SLA", included: true },
     ],
-    cta: "GET STARTED",
+    cta: "TALK TO US",
     highlighted: true,
   },
   {
@@ -122,7 +122,7 @@ const TIERS: Tier[] = [
     tag: null,
     description: "Unlimited agents + custom integrations",
     features: [
-      { text: "HIPAA/FedRAMP compliance + on-prem deployment", included: true },
+      { text: "HIPAA compliance + on-prem deployment", included: true },
       { text: "Custom 20B parameter model for local running", included: true },
       { text: "Production forecasting + predictive analytics", included: true },
       { text: "Unlimited agents", included: true },
@@ -266,7 +266,7 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
       {/* CTA */}
       <div className="px-5 pb-5 pt-3">
         <motion.a
-          href={tier.id === "enterprise" ? "https://calendly.com/mohan-overcastsre/30min" : "https://platform.overcastsre.com/"}
+          href={tier.id === "enterprise" || tier.id === "midmarket" ? "https://calendly.com/mohan-overcastsre/30min" : "https://platform.overcastsre.com/"}
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}

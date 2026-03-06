@@ -98,7 +98,7 @@ export function RlAlgorithmsChart() {
         <span className="text-[8px] text-[#6B7C85] leading-snug" style={{ letterSpacing: "0.02em", lineHeight: "1.6" }}>
           <strong className="text-[#C8CDD0] font-semibold">PPO</strong> approaching entropy collapse at ep ~480.
           Recommend increasing <strong className="text-[#C8CDD0] font-semibold">ent_coef</strong> to 0.02 and
-          clipping reward signal — projected <strong className="text-[#C8CDD0] font-semibold">+12% stability</strong>.
+          clipping reward signal  —  projected <strong className="text-[#C8CDD0] font-semibold">+12% stability</strong>.
         </span>
       </div>
 

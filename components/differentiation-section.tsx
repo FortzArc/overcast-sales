@@ -14,10 +14,10 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 const competitors = [
   {
-    category: "Post-Production Monitoring",
+    category: "Post - Production Monitoring",
     names: ["Datadog", "Sentry"],
     whatTheyDo: "Curate logs, error handling after trigger events",
-    limitation: "Reactive - only helps after issues occur",
+    limitation: "Reactive  -  only helps after issues occur",
     features: [
       { text: "Log curation", included: true },
       { text: "Error handling", included: true },
@@ -38,11 +38,11 @@ const competitors = [
       { text: "Code analysis", included: true },
       { text: "Log integration", included: false },
       { text: "Production forecasting", included: false },
-      { text: "Real-time suggestions", included: false },
+      { text: "Real - time suggestions", included: false },
     ],
   },
   {
-    category: "Overcast - The Gap Closer",
+    category: "Overcast  -  The Gap Closer",
     names: ["Overcast"],
     whatTheyDo: "Combines both approaches",
     limitation: "Forecasts production issues before they break",
@@ -51,7 +51,7 @@ const competitors = [
       { text: "Log curation", included: true },
       { text: "Codebase analysis", included: true },
       { text: "Production forecasting", included: true },
-      { text: "Real-time suggestions", included: true },
+      { text: "Real - time suggestions", included: true },
       { text: "No trigger event needed", included: true },
       { text: "Automated PR fixes", included: true },
     ],
@@ -90,7 +90,7 @@ export function DifferentiationSection() {
         </h2>
         <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed max-w-4xl">
           While others focus on reactive monitoring or code review alone, Overcast combines both approaches to 
-          forecast production issues before they break—closing the development cycle gap.
+          forecast production issues before they break  —  closing the development cycle gap.
         </p>
       </motion.div>
 

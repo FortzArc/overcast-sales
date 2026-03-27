@@ -7,7 +7,7 @@ import { Code2, Cloud, TrendingUp, Brain, Bug } from "lucide-react"
 
 const ease = [0.22, 1, 0.36, 1] as const
 
-export function WhyOvercastSection() {
+export function WhyRaincurveSection() {
   return (
     <section className="w-full px-4 sm:px-6 py-6 sm:py-8 lg:px-12">
       {/* Section label */}
@@ -19,7 +19,7 @@ export function WhyOvercastSection() {
         className="flex items-center gap-4 mb-8"
       >
         <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
-          {"// SECTION: WHY_OVERCAST"}
+          {"// SECTION: WHY_RAINCURVE"}
         </span>
         <div className="flex-1 border-t border-border" />
         <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">003</span>
@@ -34,10 +34,10 @@ export function WhyOvercastSection() {
         className="mb-8"
       >
         <h2 className="text-2xl lg:text-3xl font-mono font-bold tracking-tight uppercase text-foreground mb-3">
-          Why Overcast?
+          Why Raincurve?
         </h2>
         <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed max-w-4xl">
-          The first-of-its-kind dev platform that closes the development cycle gap. Overcast combines log curation 
+          The first-of-its-kind dev platform that closes the development cycle gap. Raincurve combines log curation 
           with codebase analysis to forecast production issues before they break  —  no trigger event needed.
         </p>
       </motion.div>
@@ -85,12 +85,12 @@ export function WhyOvercastSection() {
                   Forecast what existing code will break production
                 </h3>
                 <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
-                  Overcast curates your logs itself (or through integrations) and reads your entire codebase to come up with 
+                  Raincurve curates your logs itself (or through integrations) and reads your entire codebase to come up with 
                   a forecast of what existing code will break production using dev code and logs as evidence. By combining 
                   log curation with codebase analysis, we identify patterns and potential production failures before they occur.
                 </p>
                 <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
-                  No trigger event needed  —  real - time production code suggestions as new features are pushed. Overcast analyzes 
+                  No trigger event needed  —  real - time production code suggestions as new features are pushed. Raincurve analyzes 
                   your codebase in depth, automatically generates PRs to fix forecasted issues, and provides the code changes 
                   needed to prevent production breaks before they happen.
                 </p>
@@ -112,7 +112,7 @@ export function WhyOvercastSection() {
                   <div className="p-4 text-[8px] sm:text-[9px] leading-relaxed font-mono" style={{ lineHeight: "1.65" }}>
                     {/* CLI Flowchart */}
                     <div className="mb-4 font-mono">
-                      <div className="text-[#6B7C85] mb-2">$ overcast forecast</div>
+                      <div className="text-[#6B7C85] mb-2">$ raincurve forecast</div>
                       <div className="text-[#6B7C85]">│</div>
                       <div className="text-[#6B7C85]">├─ <span className="text-[#8E9BA3]">curate</span> <span className="text-[#b0bec5]">logs</span> <span className="text-[#6B7C85]">+</span> <span className="text-[#8E9BA3]">analyze</span> <span className="text-[#b0bec5]">codebase</span></div>
                       <div className="text-[#6B7C85]">│  <span className="text-[#6B7C85]">└─{'>'}</span> <span className="text-[#8E9BA3]">identify</span> <span className="text-[#b0bec5]">patterns</span></div>
@@ -129,7 +129,7 @@ export function WhyOvercastSection() {
                     {/* Code Example */}
                     <div className="font-mono">
                         {`// Example: Combined analysis
-const forecast = await overcast.forecast({
+const forecast = await raincurve.forecast({
   logs: curatedLogs,
   codebase: fullCodebase,
   patterns: identifiedPatterns
@@ -164,7 +164,7 @@ const forecast = await overcast.forecast({
                           }
                           
                           const keywords = ['const', 'await', 'new', 'from', 'import']
-                          const functions = ['forecast', 'overcast']
+                          const functions = ['forecast', 'raincurve']
                           
                           const allMatches: Array<{ start: number; end: number; type: string; text: string }> = []
                           strings.forEach(s => allMatches.push({ ...s, type: 'string' }))
@@ -256,7 +256,7 @@ const forecast = await overcast.forecast({
                   Agents designed for your specific regulations & rules
                 </h3>
                 <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
-                  Overcast's agents are designed specifically for your domain's regulations and rules. Each agent can be 
+                  Raincurve's agents are designed specifically for your domain's regulations and rules. Each agent can be 
                   customized with Prompt Packets tailored to your industry requirements, compliance standards, and operational 
                   guidelines.
                 </p>
@@ -298,15 +298,15 @@ const forecast = await overcast.forecast({
                   OpenClaw Native Architecture
                 </h3>
                 <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
-                  To be OpenClaw-native means Overcast isn't just calling an agent framework  —  it's architected around an agent 
+                  To be OpenClaw-native means Raincurve isn't just calling an agent framework  —  it's architected around an agent 
                   runtime as its core execution layer. Instead of static pipelines that analyze logs or PRs after the fact, 
-                  Overcast runs structured, stateful agents that continuously reason over your codebase, deploy history, logs, 
+                  Raincurve runs structured, stateful agents that continuously reason over your codebase, deploy history, logs, 
                   and incident memory inside a unified execution graph.
                 </p>
                 <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
                   Every forecast, RCA, or production recommendation is generated by agents that can plan, call infra tools 
                   (GitHub, Prometheus, Kubernetes), simulate impact chains, and retain context over time. In other words, 
-                  OpenClaw-native means Overcast behaves less like an observability dashboard and more like an autonomous 
+                  OpenClaw-native means Raincurve behaves less like an observability dashboard and more like an autonomous 
                   production intelligence system that thinks across time, changes, and environments  —  not just reacts to them.
                 </p>
               </div>
@@ -326,7 +326,7 @@ const forecast = await overcast.forecast({
                   {/* CLI Flowchart */}
                   <div className="p-4 text-[8px] sm:text-[9px] leading-relaxed font-mono" style={{ lineHeight: "1.65" }}>
                     <div className="mb-4 font-mono">
-                      <div className="text-[#6B7C85] mb-2">$ overcast runtime</div>
+                      <div className="text-[#6B7C85] mb-2">$ raincurve runtime</div>
                       <div className="text-[#6B7C85]">│</div>
                       <div className="text-[#6B7C85]">├─ <span className="text-[#8E9BA3]">unified</span> <span className="text-[#b0bec5]">execution</span> <span className="text-[#b0bec5]">graph</span></div>
                       <div className="text-[#6B7C85]">│  <span className="text-[#6B7C85]">└─{'>'}</span> <span className="text-[#8E9BA3]">stateful</span> <span className="text-[#b0bec5]">agents</span> <span className="text-[#6B7C85]">(</span><span className="text-[#b0bec5]">plan</span><span className="text-[#6B7C85]">,</span> <span className="text-[#b0bec5]">reason</span><span className="text-[#6B7C85]">,</span> <span className="text-[#b0bec5]">retain</span><span className="text-[#6B7C85]">)</span></div>

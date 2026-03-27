@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
-import { GeistPixelGrid } from 'geist/font/pixel'
 import { ThemeProvider } from '@/components/theme-provider'
 
 import './globals.css'
@@ -11,11 +10,11 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Overcast | RL Agents for Reliability Intelligence',
+  title: 'Raincurve | RL Agents for Reliability Intelligence',
   description:
     'RL agents for reliability intelligence. Forecast production issues before they break. The dev platform that closes the development cycle gap.',
   keywords: [
-    'Overcast',
+    'Raincurve',
     'RL agents',
     'reliability intelligence',
     'production forecasting',
@@ -26,9 +25,9 @@ export const metadata: Metadata = {
     'log curation',
     'production monitoring',
   ],
-  authors: [{ name: 'Overcast' }],
-  creator: 'Overcast',
-  publisher: 'Overcast',
+  authors: [{ name: 'Raincurve' }],
+  creator: 'Raincurve',
+  publisher: 'Raincurve',
   robots: {
     index: true,
     follow: true,
@@ -43,17 +42,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'Overcast | RL Agents for Reliability Intelligence',
+    title: 'Raincurve | RL Agents for Reliability Intelligence',
     description:
       'RL agents for reliability intelligence. Forecast production issues before they break. The dev platform that closes the development cycle gap.',
-    siteName: 'Overcast',
+    siteName: 'Raincurve',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Overcast | RL Agents for Reliability Intelligence',
+    title: 'Raincurve | RL Agents for Reliability Intelligence',
     description:
       'RL agents for reliability intelligence. Forecast production issues before they break. The dev platform that closes the development cycle gap.',
-    creator: '@overcast',
+    creator: '@raincurve',
   },
   category: 'technology',
 }
@@ -71,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable} dark`} suppressHydrationWarning>
+    <html lang="en" className={`${jetbrainsMono.variable} dark`} suppressHydrationWarning>
       <body className="font-mono antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false} disableTransitionOnChange>
           {children}

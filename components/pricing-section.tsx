@@ -88,7 +88,7 @@ const TIERS: Tier[] = [
     tag: null,
     description: "Plug-and-play sidecar for instant reliability",
     features: [
-      { text: "Overcast SDK  —  drag & drop setup", included: true },
+      { text: "Raincurve SDK  —  drag & drop setup", included: true },
       { text: "Production forecasting + auto PR fixes", included: true },
       { text: "3 agents", included: true },
       { text: "7-day history", included: true },
@@ -266,7 +266,7 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
       {/* CTA */}
       <div className="px-5 pb-5 pt-3">
         <motion.a
-          href={tier.id === "enterprise" || tier.id === "midmarket" ? "https://calendly.com/mohan-overcastsre/30min" : "https://platform.overcastsre.com/"}
+          href={tier.id === "enterprise" || tier.id === "midmarket" ? "https://calendly.com/mohan-raincurvesre/30min" : "https://platform.raincurvesre.com/"}
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}

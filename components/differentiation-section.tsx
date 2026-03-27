@@ -42,8 +42,8 @@ const competitors = [
     ],
   },
   {
-    category: "Overcast  -  The Gap Closer",
-    names: ["Overcast"],
+    category: "Raincurve  -  The Gap Closer",
+    names: ["Raincurve"],
     whatTheyDo: "Combines both approaches",
     limitation: "Forecasts production issues before they break",
     value: "Closes the development cycle gap",
@@ -86,10 +86,10 @@ export function DifferentiationSection() {
         className="mb-8"
       >
         <h2 className="text-2xl lg:text-3xl font-mono font-bold tracking-tight uppercase text-foreground mb-3">
-          How Overcast Differs
+          How Raincurve Differs
         </h2>
         <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed max-w-4xl">
-          While others focus on reactive monitoring or code review alone, Overcast combines both approaches to 
+          While others focus on reactive monitoring or code review alone, Raincurve combines both approaches to 
           forecast production issues before they break  —  closing the development cycle gap.
         </p>
       </motion.div>
@@ -182,7 +182,7 @@ export function DifferentiationSection() {
                   </p>
                 </div>
 
-                {/* Value prop for Overcast */}
+                {/* Value prop for Raincurve */}
                 {competitor.value && (
                   <div className="pt-2">
                     <div className={`text-[10px] tracking-[0.2em] uppercase font-mono ${

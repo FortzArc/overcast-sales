@@ -51,7 +51,7 @@ const slides = [
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-10" style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.5)" }}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground font-mono tracking-tight uppercase">
-                Overcast
+                Raincurve
               </h1>
               <p className="text-sm sm:text-base lg:text-lg font-mono text-foreground/90 tracking-wider mt-3">
                 RL Agents for Reliability Intelligence
@@ -215,7 +215,7 @@ const slides = [
               <tr className="border-b-2 border-foreground">
                 <th className="text-left p-3 uppercase tracking-wider">Tool</th>
                 <th className="text-left p-3 uppercase tracking-wider">Focus</th>
-                <th className="text-left p-3 uppercase tracking-wider">Overcast Advantage</th>
+                <th className="text-left p-3 uppercase tracking-wider">Raincurve Advantage</th>
               </tr>
             </thead>
             <tbody>
@@ -230,7 +230,7 @@ const slides = [
                 <td className="p-3 text-foreground">Log + codebase correlation</td>
               </tr>
               <tr>
-                <td className="p-3 text-muted-foreground">Overcast</td>
+                <td className="p-3 text-muted-foreground">Raincurve</td>
                 <td className="p-3 text-foreground">Logs + codebase</td>
                 <td className="p-3 text-[#7a96a4]">Forecast before break</td>
               </tr>
@@ -415,19 +415,19 @@ const slides = [
         </h2>
         <div className="space-y-4 font-mono text-sm">
           <p>
-            <Link href="https://platform.overcastsre.com/" target="_blank" rel="noopener noreferrer" className="text-[#7a96a4] underline hover:no-underline">
-              platform.overcastsre.com
+            <Link href="https://platform.raincurvesre.com/" target="_blank" rel="noopener noreferrer" className="text-[#7a96a4] underline hover:no-underline">
+              platform.raincurvesre.com
             </Link>
           </p>
           <p>
-            <Link href="https://calendly.com/mohan-overcastsre/30min" target="_blank" rel="noopener noreferrer" className="text-[#7a96a4] underline hover:no-underline">
-              calendly.com/mohan-overcastsre/30min
+            <Link href="https://calendly.com/mohan-raincurvesre/30min" target="_blank" rel="noopener noreferrer" className="text-[#7a96a4] underline hover:no-underline">
+              calendly.com/mohan-raincurvesre/30min
             </Link>
           </p>
-          <p className="text-muted-foreground">@overcast</p>
+          <p className="text-muted-foreground">@raincurve</p>
         </div>
         <p className="mt-12 text-[10px] font-mono tracking-widest uppercase text-muted-foreground">
-          Overcast SRE · (C) 2026
+          Raincurve SRE · (C) 2026
         </p>
       </div>
     ),

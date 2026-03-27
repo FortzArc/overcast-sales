@@ -20,11 +20,11 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     company: "Cosmed",
-    title: "See how Overcast helped this Medical Manufacturing Company cut MTTR in half",
+    title: "See how Raincurve helped this Medical Manufacturing Company cut MTTR in half",
     executiveName: "Nathan Miller",
     executiveRole: "Product Manager",
     description:
-      "Cosmed, a leading medical manufacturing company, faced significant challenges with distributed tracing across their microservices architecture. The engineering team had successfully resolved seven production issues, but an eighth issue remained undiagnosed for over a week despite extensive debugging efforts. Traditional monitoring tools failed to correlate logs effectively across their complex system architecture. After implementing Overcast, the platform analyzed the codebase and correlated logs from multiple systems, identifying the root cause  —  a subtle race condition that only manifested under specific load conditions  —  in less than 30 minutes. Overcast's forecasting capabilities have reduced Cosmed's mean time to resolution by 50%, enabling the engineering team to shift focus from firefighting production incidents to building new features and improving system reliability.",
+      "Cosmed, a leading medical manufacturing company, faced significant challenges with distributed tracing across their microservices architecture. The engineering team had successfully resolved seven production issues, but an eighth issue remained undiagnosed for over a week despite extensive debugging efforts. Traditional monitoring tools failed to correlate logs effectively across their complex system architecture. After implementing Raincurve, the platform analyzed the codebase and correlated logs from multiple systems, identifying the root cause  —  a subtle race condition that only manifested under specific load conditions  —  in less than 30 minutes. Raincurve's forecasting capabilities have reduced Cosmed's mean time to resolution by 50%, enabling the engineering team to shift focus from firefighting production incidents to building new features and improving system reliability.",
     stats: [
       { label: "MTTR_REDUCTION", value: "50%" },
       { label: "ISSUES_RESOLVED", value: "8" },
@@ -34,11 +34,11 @@ const testimonials: Testimonial[] = [
   },
   {
     company: "Playgent AI",
-    title: "This YC backed company used Overcast to manage downtime during their initial launch",
+    title: "This YC backed company used Raincurve to manage downtime during their initial launch",
     executiveName: "Aniruddh Sriram",
     executiveRole: "CEO",
     description:
-      "Playgent AI, a Y Combinator-backed startup, required exceptional uptime and reliability from day one of their launch. Prior to implementing Overcast, the development team frequently took the site offline to diagnose and fix issues in development, which significantly impacted their early user base and growth trajectory. Overcast's real-time production code suggestions and automated PR fixes transformed their operational approach, allowing the team to address potential issues proactively before they affected users. During the critical launch phase, Overcast proved instrumental in maintaining service availability. The platform enabled Playgent AI to achieve 99.9% uptime during their launch period, preventing over 12 hours of potential downtime and resolving 24 incidents before they could impact user experience. This reliability directly contributed to user trust and retention during their most vulnerable growth phase.",
+      "Playgent AI, a Y Combinator-backed startup, required exceptional uptime and reliability from day one of their launch. Prior to implementing Raincurve, the development team frequently took the site offline to diagnose and fix issues in development, which significantly impacted their early user base and growth trajectory. Raincurve's real-time production code suggestions and automated PR fixes transformed their operational approach, allowing the team to address potential issues proactively before they affected users. During the critical launch phase, Raincurve proved instrumental in maintaining service availability. The platform enabled Playgent AI to achieve 99.9% uptime during their launch period, preventing over 12 hours of potential downtime and resolving 24 incidents before they could impact user experience. This reliability directly contributed to user trust and retention during their most vulnerable growth phase.",
     stats: [
       { label: "UPTIME", value: "99.9%" },
       { label: "DOWNTIME_PREVENTED", value: "12hrs" },
@@ -48,11 +48,11 @@ const testimonials: Testimonial[] = [
   },
   {
     company: "Bedrock AI",
-    title: "Impliments Overcast for post prod. on their growing rental property management platform",
+    title: "Impliments Raincurve for post prod. on their growing rental property management platform",
     executiveName: "Aravind Ganesan",
     executiveRole: "CEO",
     description:
-      "Bedrock AI's rental property management platform experienced rapid growth as they ramped up their go-to-market strategy, with traffic doubling in a short period. Without comprehensive operational management software, the operations team struggled to identify and address potential issues before they became critical production incidents. Overcast's implementation transformed their production management approach. The platform's forecasting capabilities proved essential during the scaling phase, analyzing the codebase and correlating logs to identify 45 potential production issues before they could impact users. Automated PR fixes reduced Bedrock AI's mean time to resolution by 65%, enabling confident scaling without compromising reliability. Overcast has been critical in maintaining 100% scale success during their rapid growth phase, ensuring the platform remains stable and reliable as they continue onboarding new customers and expanding their market presence.",
+      "Bedrock AI's rental property management platform experienced rapid growth as they ramped up their go-to-market strategy, with traffic doubling in a short period. Without comprehensive operational management software, the operations team struggled to identify and address potential issues before they became critical production incidents. Raincurve's implementation transformed their production management approach. The platform's forecasting capabilities proved essential during the scaling phase, analyzing the codebase and correlating logs to identify 45 potential production issues before they could impact users. Automated PR fixes reduced Bedrock AI's mean time to resolution by 65%, enabling confident scaling without compromising reliability. Raincurve has been critical in maintaining 100% scale success during their rapid growth phase, ensuring the platform remains stable and reliable as they continue onboarding new customers and expanding their market presence.",
     stats: [
       { label: "TRAFFIC_GROWTH", value: "2x" },
       { label: "ISSUES_FORECASTED", value: "45" },
@@ -193,7 +193,7 @@ export function AboutSection() {
         className="flex items-center gap-4 mb-8"
       >
         <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
-          {"// SECTION: ABOUT_OVERCAST"}
+          {"// SECTION: ABOUT_RAINCURVE"}
         </span>
         <div className="flex-1 border-t border-border" />
         <BlinkDot />

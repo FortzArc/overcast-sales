@@ -34,7 +34,7 @@ export function Navbar() {
           >
             <Image
               src="/logo.png"
-              alt="Overcast logo"
+              alt="Raincurve logo"
               width={16}
               height={16}
               className="object-contain"
@@ -46,7 +46,7 @@ export function Navbar() {
               }}
             />
             <span className="text-xs font-mono tracking-[0.15em] uppercase font-bold">
-              OVERCAST
+              RAINCURVE
             </span>
           </motion.div>
 
@@ -74,7 +74,7 @@ export function Navbar() {
             className="flex items-center gap-4"
           >
             <a
-              href="https://platform.overcastsre.com/"
+              href="https://platform.raincurvesre.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:block text-xs font-mono tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-200"
@@ -82,7 +82,7 @@ export function Navbar() {
               Log In
             </a>
             <motion.a
-              href="https://platform.overcastsre.com/"
+              href="https://platform.raincurvesre.com/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -116,7 +116,7 @@ export function Navbar() {
                   ))}
                   <div className="border-t border-border pt-4 flex flex-col gap-3">
                     <a
-                      href="https://platform.overcastsre.com/"
+                      href="https://platform.raincurvesre.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setMobileOpen(false)}
@@ -125,7 +125,7 @@ export function Navbar() {
                       Log In
                     </a>
                     <a
-                      href="https://platform.overcastsre.com/"
+                      href="https://platform.raincurvesre.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setMobileOpen(false)}

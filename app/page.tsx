@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { GlitchMarquee } from "@/components/glitch-marquee"
-import { WhyOvercastSection } from "@/components/why-overcast-section"
+import { WhyRaincurveSection } from "@/components/why-raincurve-section"
 import { DifferentiationSection } from "@/components/differentiation-section"
 import { FeatureGrid } from "@/components/feature-grid"
 import { AboutSection } from "@/components/about-section"
@@ -16,7 +16,7 @@ export default function Page() {
       <main>
         <HeroSection />
         <GlitchMarquee />
-        <WhyOvercastSection />
+        <WhyRaincurveSection />
         <DifferentiationSection />
         <FeatureGrid />
         <AboutSection />

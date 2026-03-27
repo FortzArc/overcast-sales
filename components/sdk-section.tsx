@@ -54,7 +54,7 @@ export function SdkSection() {
           Easy Drag & Drop SDK
         </h2>
         <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed max-w-4xl">
-          Get started with Overcast in minutes. Our drag and drop SDK makes setup effortless  —  no complex 
+          Get started with Raincurve in minutes. Our drag and drop SDK makes setup effortless  —  no complex 
           configuration or infrastructure changes required.
         </p>
       </motion.div>
@@ -119,7 +119,7 @@ export function SdkSection() {
                 SDK_INTEGRATION
               </span>
               <span className="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono break-all sm:break-normal">
-                npm install @overcast/sdk
+                npm install @raincurve/sdk
               </span>
             </div>
             <div className="space-y-3">
@@ -139,20 +139,20 @@ export function SdkSection() {
                   <div className="p-4 text-[8px] sm:text-[9px] leading-relaxed" style={{ lineHeight: "1.65" }}>
                   <pre className="font-mono overflow-x-auto whitespace-pre-wrap">
                     <code>
-                      {`import { Overcast } from '@overcast/sdk'
+                      {`import { Raincurve } from '@raincurve/sdk'
 
 // Drag & drop setup
-const overcast = new Overcast({
-  apiKey: process.env.OVERCAST_API_KEY,
+const raincurve = new Raincurve({
+  apiKey: process.env.RAINCURVE_API_KEY,
   // Auto-detects codebase
   // Auto-connects to logs
 })
 
 // Start forecasting
-overcast.forecast()
+raincurve.forecast()
 
 // Real - time suggestions
-overcast.on('suggestion', (fix) => {
+raincurve.on('suggestion', (fix) => {
   // Auto-generates PR
   console.log(fix)
 })`.split('\n').map((line, i) => {
@@ -183,7 +183,7 @@ overcast.on('suggestion', (fix) => {
                         }
                         
                         const keywords = ['const', 'new', 'from', 'import']
-                        const functions = ['Overcast', 'forecast', 'on', 'console', 'log']
+                        const functions = ['Raincurve', 'forecast', 'on', 'console', 'log']
                         
                         const allMatches: Array<{ start: number; end: number; type: string; text: string }> = []
                         strings.forEach(s => allMatches.push({ ...s, type: 'string' }))

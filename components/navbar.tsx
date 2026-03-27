@@ -74,7 +74,7 @@ export function Navbar() {
             className="flex items-center gap-4"
           >
             <a
-              href="https://platform.raincurvesre.com/"
+              href="https://platform.overcastsre.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:block text-xs font-mono tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-200"
@@ -82,7 +82,7 @@ export function Navbar() {
               Log In
             </a>
             <motion.a
-              href="https://platform.raincurvesre.com/"
+              href="https://platform.overcastsre.com/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -116,7 +116,7 @@ export function Navbar() {
                   ))}
                   <div className="border-t border-border pt-4 flex flex-col gap-3">
                     <a
-                      href="https://platform.raincurvesre.com/"
+                      href="https://platform.overcastsre.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setMobileOpen(false)}
@@ -125,7 +125,7 @@ export function Navbar() {
                       Log In
                     </a>
                     <a
-                      href="https://platform.raincurvesre.com/"
+                      href="https://platform.overcastsre.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setMobileOpen(false)}

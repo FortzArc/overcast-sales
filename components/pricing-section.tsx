@@ -266,7 +266,7 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
       {/* CTA */}
       <div className="px-5 pb-5 pt-3">
         <motion.a
-          href={tier.id === "enterprise" || tier.id === "midmarket" ? "https://calendly.com/mohan-raincurvesre/30min" : "https://platform.raincurvesre.com/"}
+          href={tier.id === "enterprise" || tier.id === "midmarket" ? "https://calendly.com/mohan-overcastsre/30min" : "https://platform.overcastsre.com/"}
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}

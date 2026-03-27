@@ -415,13 +415,13 @@ const slides = [
         </h2>
         <div className="space-y-4 font-mono text-sm">
           <p>
-            <Link href="https://platform.raincurvesre.com/" target="_blank" rel="noopener noreferrer" className="text-[#7a96a4] underline hover:no-underline">
-              platform.raincurvesre.com
+            <Link href="https://platform.overcastsre.com/" target="_blank" rel="noopener noreferrer" className="text-[#7a96a4] underline hover:no-underline">
+              platform.overcastsre.com
             </Link>
           </p>
           <p>
-            <Link href="https://calendly.com/mohan-raincurvesre/30min" target="_blank" rel="noopener noreferrer" className="text-[#7a96a4] underline hover:no-underline">
-              calendly.com/mohan-raincurvesre/30min
+            <Link href="https://calendly.com/mohan-overcastsre/30min" target="_blank" rel="noopener noreferrer" className="text-[#7a96a4] underline hover:no-underline">
+              calendly.com/mohan-overcastsre/30min
             </Link>
           </p>
           <p className="text-muted-foreground">@raincurve</p>

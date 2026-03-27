@@ -63,7 +63,7 @@ export function HeroSection() {
           {/* CTA Button Overlay - Centered */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full max-w-5xl px-6 z-10 flex justify-center">
             <motion.a
-              href="https://platform.raincurvesre.com/"
+              href="https://platform.overcastsre.com/"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 10 }}
